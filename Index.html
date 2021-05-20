@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="utf-8" />
+	<head>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>给心心</title>
+
+		<script>
+			function myfunction() {
+				var x = document.getElementById("entry_month").value;
+				var y = document.getElementById("entry_day").value;
+				if (x == "" || y == "") {
+					alert("You won't forget it, will you? ");
+				} else if (x == "3" && y == "22") {
+					window.location.href = "Second.html";
+				} else {
+					alert("You won't forget it, will you? ");
+				}
+			}
+		</script>
+
+		<style type="text/css">
+			body {
+				background: rgb(238, 174, 202);
+				background: linear-gradient(
+					180deg,
+					rgba(238, 174, 202, 1) 0%,
+					rgba(255, 255, 238, 1) 0%
+				);
+			}
+			* {
+				margin: 0;
+				padding: 0;
+				font-size: 13px;
+				font-family: microsoft yahei;
+			}
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+			}
+
+			#container {
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 999;
+			}
+			#output {
+				width: 100%;
+				height: 100%;
+			}
+			.prompt {
+				width: 60%;
+				height: 30px;
+				margin: 5px auto;
+				text-align: center;
+				line-height: 30px;
+				font-family: microsoft yahei, Arial, sans-serif;
+				font-size: 13px;
+				color: #df0000;
+			}
+			.containerT {
+				width: 400px;
+				height: 300px;
+				text-align: center;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin: -150px 0 0 -200px;
+				border-radius: 3px;
+			}
+			.containerT h1 {
+				font-size: 18px;
+				font-family: microsoft yahei, Arial, sans-serif;
+				-webkit-transition-duration: 1s;
+				transition-duration: 1s;
+				-webkit-transition-timing-function: ease-in-put;
+				transition-timing-function: ease-in-put;
+				font-weight: 500;
+			}
+			form {
+				padding: 20px 0;
+				position: relative;
+				z-index: 2;
+			}
+			form #entry_month {
+				position: absolute;
+				left: 50px;
+			}
+			form #entry_day {
+				position: absolute;
+				right: 50px;
+			}
+			form #entry_btn {
+				position: relative;
+				top: 60px;
+			}
+			form input {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				outline: 0;
+				border: 0px;
+				border-radius: 10px;
+				background: linear-gradient(145deg, #e6e6d6, #ffffff);
+				box-shadow: 10px 10px 20px #a6a69b, -10px -10px 20px #ffffff;
+				width: 100px;
+				padding: 8px 15px;
+				margin: 0 auto 10px;
+				display: block;
+				text-align: center;
+				font-size: 15px;
+				color: #333;
+				-webkit-transition-duration: 0.25s;
+				transition-duration: 0.25s;
+				font-weight: 300;
+			}
+			form input:hover {
+				background: linear-gradient(145deg, #ffffff, #e6e6d6);
+				box-shadow: 10px 10px 20px #66665f, -10px -10px 20px #ffffff;
+			}
+			form input:focus {
+				border-radius: 10px;
+				background: #ffffee;
+				box-shadow: inset 10px 10px 20px #a6a69b, inset -10px -10px 20px #ffffff;
+				color: #333333;
+			}
+			form button {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				padding: 10px 15px;
+				color: #333;
+				width: 200px;
+				cursor: pointer;
+				font-family: microsoft yahei, Arial, sans-serif;
+				font-size: 16px;
+				font-weight: 700;
+				-webkit-transition-duration: 0.25s;
+				transition-duration: 0.25s;
+				border: 0px;
+				border-radius: 50px;
+				background: linear-gradient(145deg, #ffffff, #e6e6d6);
+				box-shadow: 10px 10px 20px #99998f, -10px -10px 20px #ffffff;
+			}
+			form button:hover {
+				border-radius: 50px;
+				background: linear-gradient(145deg, #ffffff, #e6e6d6);
+				box-shadow: 10px 10px 20px #66665f, -10px -10px 20px #ffffff;
+			}
+			form button:focus {
+				outline: 0;
+			}
+			form button:active {
+				border-radius: 50px;
+				background: #ffffee;
+				box-shadow: inset 10px 10px 20px #99998f, inset -10px -10px 20px #ffffff;
+				color: #333333;
+			}
+		</style>
+	</head>
+	<body>
+		<audio autoplay="autoplay" loop="loop" preload="auto" src=""></audio>
+
+		<div id="container">
+			<div id="output">
+				<div class="containerT">
+					<h1>When did we fall in love?</h1>
+					<form class="form" id="entry_form">
+						<input type="text" placeholder="month" id="entry_month" />
+						<input type="text" placeholder="day" id="entry_day" />
+
+						<button
+							type="button"
+							id="entry_btn"
+							type="button"
+							onclick="myfunction()"
+						>
+							Click me!
+						</button>
+
+						<div id="prompt" class="prompt"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript"></script>
+</html>
